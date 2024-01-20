@@ -1,0 +1,24 @@
+html,body {
+  height: 100%;
+}
+
+.app {
+  background-color: #f1f3f5;
+}
+
+.app-header {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+#social > svg:not(:last-child) {
+  margin-right: 5px;
+}
+
+.text-analyzer {
+  background-color: white;
+  border-radius: 20px;
+}
+.text-box {
+  background-color: white;
+  border-radius: 20px;
+}
