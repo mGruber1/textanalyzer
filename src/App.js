@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="app h-100">
       <AppHeader></AppHeader>
-      <TextAnalyzer sentenceCount={sentenceCount} setSentenceCount={handleSentenceCount}>
+      <TextAnalyzer>
         <TextAnalyzerItem title="Characters" value={characterCount} setValue={handleCharacterCount}></TextAnalyzerItem>
         <TextAnalyzerItem title="Words" value={wordCount} setValue={handleWordCount}></TextAnalyzerItem>
         <TextAnalyzerItem title="Sentences" value={sentenceCount} setValue={handleSentenceCount}></TextAnalyzerItem>
