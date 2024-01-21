@@ -8,6 +8,7 @@ import { useState } from 'react';
 function App() {
   const [characterCount, setCharacterCount] = useState(0);
   const [wordCount, setWordCount] = useState(0);
+  const [sentenceCount, setSentenceCount] = useState(0);
 
   const handleCharacterCount = (characters) => {
     setCharacterCount(characters);
@@ -16,10 +17,14 @@ function App() {
   const handleWordCount = (array) => {
     setWordCount(array.length);
   }
+
+  const handleSentenceCount = (array) => {
+    setSentenceCount(array.length);
+  }
   return (
     <div className="app h-100">
       <AppHeader></AppHeader>
-      <TextAnalyzer characterCount={characterCount} setCharacterCount={handleCharacterCount} wordCount={wordCount} setWordCount={handleWordCount}></TextAnalyzer>
+      <TextAnalyzer characterCount={characterCount} setCharacterCount={handleCharacterCount} wordCount={wordCount} setWordCount={handleWordCount} sentenceCount={sentenceCount} setSentenceCount={handleSentenceCount}></TextAnalyzer>
       <TextBox></TextBox>
     </div>
   );

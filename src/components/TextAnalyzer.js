@@ -10,7 +10,10 @@ const TextAnalyzer = (props) => {
             props.setWordCount(words);
         }
 
-
+        const sentences = text.match(/\./g);
+        if (sentences.length !== 0) {
+            props.setSentenceCount(sentences);
+        }
     }, []);
     return (
         <div className="container text-analyzer p-4 mb-4 d-flex justify-content-between">
@@ -24,7 +27,7 @@ const TextAnalyzer = (props) => {
             </div>
             <div className="text-center text-analyzer-item">
                 <h5 className="text-secondary">Sentences</h5>
-                <h2>300</h2>
+                <h2>{props.sentenceCount}</h2>
             </div>
         </div>
     )
