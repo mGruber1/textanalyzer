@@ -4,12 +4,19 @@ const TextAnalyzer = (props) => {
     useEffect(() => {
         const text = document.getElementById('text').innerHTML;
         props.setCharacterCount(text.length)
+
+        const words = text.match(/\S+/g);
+        if (words.length !== 0) {
+            props.setWordCount(words);
+        }
+
+
     }, []);
     return (
         <div className="container text-analyzer p-4 mb-4 d-flex justify-content-between">
             <div className="text-center text-analyzer-item">
                 <h5 className="text-secondary">Words</h5>
-                <h2>300</h2>
+                <h2>{props.wordCount}</h2>
             </div>
             <div className="text-center text-analyzer-item">
                 <h5 className="text-secondary">Characters</h5>
